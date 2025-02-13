@@ -25,13 +25,9 @@ public class Pratica01 {
         y.c = sc.nextDouble();
 
         
-        double pX = (x.a + x.b + x.c) / 2.0;
-        double areaX = Math.sqrt(pX * (pX - x.a) * (pX - x.b) * (pX - x.c));
-
-       
-        double pY = (y.a + y.b + y.c) / 2.0;
-        double areaY = Math.sqrt(pY * (pY - y.a) * (pY - y.b) * (pY - y.c));
-
+        
+       double areaX= x.area();
+       double areaY= y.area();
         
         System.out.printf("Área do triângulo X: %.4f%n", areaX);
         System.out.printf("Área do triângulo Y: %.4f%n", areaY);
