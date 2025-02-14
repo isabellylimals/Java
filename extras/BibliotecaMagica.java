@@ -27,7 +27,7 @@ public class BibliotecaMagica {
             System.out.print("[1] Adicionar um novo Livro\n[2] Exibir todos os livros disponiveis\n[3] Buscar um livro\n[4] Ativar Magia\n[5] Sair\n");
             System.out.print("Escolha uma opção: ");
             int choice = sc.nextInt();
-            sc.nextLine(); // Consumir a nova linha deixada pelo nextInt()
+    
 
             switch (choice) {
                 case 1: 
