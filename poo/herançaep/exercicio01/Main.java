@@ -11,7 +11,7 @@ No main(), crie um vetor de Animal e adicione um Cachorro e um Gato.
 
 Percorra o vetor e chame emitirSom() para cada animal. */
 
-package exercicios;
+package exercicio01;
 
 import java.util.Scanner;
 

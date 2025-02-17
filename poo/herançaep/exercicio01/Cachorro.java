@@ -1,4 +1,4 @@
-package exercicios;
+package exercicio01;
 
 public class Cachorro extends Animal {
 
