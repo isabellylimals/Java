@@ -21,21 +21,15 @@ Após a entrada dos números, exibir as estatísticas de cada conjunto.
 package conjuntosnumericos;
 import java.util.ArrayList;
 import java.util.List;
-
-public class ConjuntosNumericos {
-    protected List<Integer> numeros;
-
-    public ConjuntosNumericos() {
-        this.numeros = new ArrayList<>();
-    }
-
-   
-
-    public List<Integer> getNumeros() {
+public abstract class ConjuntosNumericos {
+private  ArrayList<Integer> numeros= new ArrayList<>();
+public ConjuntosNumericos() {
+    this.numeros = new ArrayList<>();
+}
+    public abstract double calcularMedia();
+    public abstract int encontrarMaior();
+    public abstract int encontrarMenor();
+     public List<Integer> getNumeros() {
         return numeros;
-    }
-
-    public double calcularMedia() {
-        return 0; 
     }
 }
