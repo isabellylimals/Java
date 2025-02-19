@@ -12,56 +12,45 @@ Após a entrada dos números, exibir as estatísticas de cada conjunto.
  */
 /* */
 package conjuntosnumericos;
-public class ConjuntosPares extends ConjuntosNumericos {
 
+
+public class ConjuntosPares extends ConjuntosNumericos {
     public ConjuntosPares() {
-        super(); 
+        super();
     }
 
     @Override
     public double calcularMedia() {
-        int soma = 0;
-        int contador = 0;
+        int soma = 0, contador = 0;
 
         for (int numero : getNumeros()) {
-            if (numero % 2 == 0) { 
-                
-                soma += numero;
-                contador++;
-            }
+            soma += numero;
+            contador++;
         }
 
-        if (contador == 0) {
-            return 0; 
-        }
-
-        return (double) soma / contador; 
-    }
-    @Override
-    public int encontrarMaior(){
-        int maior= 0;
-        for(int numero: getNumeros()){
-            if(numero%2==0){
-                if(numero>maior){
-                    maior=numero;
-                }
-            }
-        }
-        System.out.println("Maior numero dos pares:");
-        return maior;
+        return (contador == 0) ? 0 : (double) soma / contador;
     }
 
     @Override
-    public int encontrarMenor(){
-        int menor= 1000;
-        for(int numero: getNumeros()){
-            if(numero%2==0){
-                if(numero>menor){
-                    menor=numero;
-                }
+    public void encontrarMaior() {
+        int maior = Integer.MIN_VALUE;
+        for (int numero : getNumeros()) {
+            if (numero > maior) {
+                maior = numero;
             }
         }
-        System.out.println("Maior numero dos pares:");
-        return menor;
+            System.out.println("Maior número par: " + maior);
+    }
+@Override
+    public void encontrarMenor() {
+        int menor = Integer.MAX_VALUE;
+
+        for (int numero : getNumeros()) {
+            if (numero < menor) {
+                menor = numero;
+            }
+        }
+
+        System.out.println("Menor número par: " + menor);
     }
 }

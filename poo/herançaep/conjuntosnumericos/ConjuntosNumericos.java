@@ -18,18 +18,28 @@ O número deve ser armazenado no ConjuntoPares se for par e no ConjuntoImpares s
 Após a entrada dos números, exibir as estatísticas de cada conjunto.
  */
 
-package conjuntosnumericos;
-import java.util.ArrayList;
-import java.util.List;
-public abstract class ConjuntosNumericos {
-private  ArrayList<Integer> numeros= new ArrayList<>();
-public ConjuntosNumericos() {
-    this.numeros = new ArrayList<>();
-}
-    public abstract double calcularMedia();
-    public abstract int encontrarMaior();
-    public abstract int encontrarMenor();
+ package conjuntosnumericos;
+
+ import java.util.ArrayList;
+ import java.util.List;
+ 
+ public abstract class ConjuntosNumericos {
+     private ArrayList<Integer> numeros;
+ 
+     public ConjuntosNumericos() {
+         this.numeros = new ArrayList<>();
+     }
+ 
+     public void adicionarNumero(int numero) {
+         numeros.add(numero);
+     }
+ 
      public List<Integer> getNumeros() {
-        return numeros;
-    }
-}
+         return numeros;
+     }
+ 
+     public abstract double calcularMedia();
+     public abstract void encontrarMaior();
+     public abstract void encontrarMenor();
+ }
+ 
